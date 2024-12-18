@@ -3,9 +3,10 @@ import React from "react";
 import Particles from "./components/particles";
 
 const navigation = [
-  { name: "Home", href: "/" },
-  
-  { name: "Contact", href: "/contact" },
+  { name: "Contact Us", href: "#" },
+  { name: "CSR Partner Search", href: "/partner-search" },
+  { name: "CSR Chat", href: "/csr-chat" },
+  { name: "CSR Chatbot", href: "/chatbot" },
 ];
 
 export default function Home() {
@@ -16,7 +17,7 @@ export default function Home() {
           <div className="flex items-center justify-between h-16">
             <div className="flex-shrink-0">
               <Link href="/" className="text-zinc-200 font-bold text-xl">
-                VED-AI
+                India CSR Stack
               </Link>
             </div>
             <div className="flex space-x-8">
@@ -41,7 +42,7 @@ export default function Home() {
           quantity={100}
         />
         <h1 className="py-3.5 px-0.5 z-10 text-4xl text-transparent duration-1000 bg-white cursor-default text-edge-outline animate-title font-display sm:text-6xl md:text-9xl whitespace-nowrap bg-clip-text ">
-          VED-AI
+          India CSR Stack
         </h1>
 
         <div className="w-full max-w-3xl px-4 mt-8 animate-fade-in">
@@ -72,15 +73,16 @@ export default function Home() {
 
         <div className="hidden w-screen h-px animate-glow md:block animate-fade-right bg-gradient-to-r from-zinc-300/0 via-zinc-300/50 to-zinc-300/0" />
         <div className="my-16 text-center animate-fade-in">
-          <h2 className="text-sm text-zinc-500 ">
-            Powering corporate {" "}
+          <h2 className="text-sm text-zinc-500">
+            Powering corporate{" "}
             <Link
               target="_blank"
               href="https://ved-ai.com"
               className="underline duration-500 hover:text-zinc-300"
             >
-              ved-ai.com
-            </Link> social reponsibility as part of the India CSR initiative
+              India CSR Stack
+            </Link>{" "}
+            social responsibility as part of the India CSR initiative
           </h2>
         </div>
       </div>
