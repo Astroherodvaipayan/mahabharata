@@ -1,30 +1,19 @@
 import "../global.css";
 import { Inter } from "@next/font/google";
-import LocalFont from "@next/font/local";
 import { Metadata } from "next";
 import { Analytics } from "./components/analytics";
 
-
 export const metadata: Metadata = {
   title: {
-    default: "Ved-ai.com",
-    template: "%s | chronark.com",
+    default: "India CSR Stack",
+    template: "%s | India CSR Stack",
   },
-  description: "Co-founder of unkey.dev and founder of planetfall.io",
+  description: "India CSR Stack - Powering India's Corporate Social Responsibility Initiative",
   openGraph: {
-    title: "chronark.com",
-    description:
-      "Co-founder of unkey.dev and founder of planetfall.io",
-    url: "https://chronark.com",
-    siteName: "chronark.com",
-    images: [
-      {
-        url: "https://chronark.com/og.png",
-        width: 1920,
-        height: 1080,
-      },
-    ],
-    locale: "en-US",
+    title: "India CSR Stack",
+    description: "India CSR Stack - Powering India's Corporate Social Responsibility Initiative",
+    url: "https://indiacsrstack.org",
+    locale: "en-IN",
     type: "website",
   },
   robots: {
@@ -38,22 +27,14 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
-  twitter: {
-    title: "Chronark",
-    card: "summary_large_image",
-  },
   icons: {
-    shortcut: "/favicon.png",
+    shortcut: "#",
   },
 };
+
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
-});
-
-const calSans = LocalFont({
-  src: "../public/fonts/CalSans-SemiBold.ttf",
-  variable: "--font-calsans",
 });
 
 export default function RootLayout({
@@ -62,18 +43,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={[inter.variable, calSans.variable].join(" ")}>
+    <html lang="en" className={inter.variable}>
       <head>
         <Analytics />
-      
       </head>
-   
-      <body
-        className={`bg-black ${process.env.NODE_ENV === "development" ? "debug-screens" : undefined
-          }`}
-      >
+      <body className="bg-black">
         {children}
-       
       </body>
     </html>
   );
