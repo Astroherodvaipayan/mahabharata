@@ -16,6 +16,9 @@ export type Project = {
   title: string
   description: string
   date: IsoDateTimeString
+  url?: string | undefined
+  repository?: string | undefined
+  published?: boolean | undefined
   /** MDX file body */
   body: MDX
   slug: string

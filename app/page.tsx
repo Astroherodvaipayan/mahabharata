@@ -1,23 +1,40 @@
+"use client";
+
 import Link from "next/link";
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Particles from "./components/particles";
 
 const navigation = [
   { name: "Contact Us", href: "/contact" },
-  { name: "CSR Partner Search", href: "/partner-search" },
-  { name: "CSR Chat", href: "/csr-chat" },
-  { name: "CSR Chatbot", href: "/chatbot" },
+  { name: "textbook", href: "/partner-search" },
+  { name: "self-learn", href: "/csr-chat" },
+  { name: "mahabharta-mentor", href: "/chatbot" },
 ];
 
 export default function Home() {
+  const [showBg, setShowBg] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowBg(true);
+    }, 3000);
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <div className="flex flex-col items-center w-screen h-screen overflow-hidden bg-gradient-to-tl from-black via-zinc-600/20 to-black">
+      <div 
+        className={`absolute inset-0 -z-20 bg-cover bg-center transition-opacity duration-1000 ${
+          showBg ? 'opacity-100' : 'opacity-0'
+        }`}
+        style={{ backgroundImage: "url('/maha.jpg')" }}
+      />
       <nav className="fixed top-0 left-0 right-0 z-50 backdrop-blur-sm bg-black/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
             <div className="flex-shrink-0">
               <Link href="/" className="text-zinc-200 font-bold text-xl">
-                India CSR Stack
+                Mahabharata
               </Link>
             </div>
             <div className="flex space-x-8">
@@ -42,7 +59,7 @@ export default function Home() {
           quantity={100}
         />
         <h1 className="py-3.5 px-0.5 z-10 text-4xl text-transparent duration-1000 bg-white cursor-default text-edge-outline animate-title font-display sm:text-6xl md:text-9xl whitespace-nowrap bg-clip-text ">
-          India CSR Stack
+          Mahabharata
         </h1>
 
         <div className="w-full max-w-3xl px-4 mt-8 animate-fade-in">
@@ -74,15 +91,15 @@ export default function Home() {
         <div className="hidden w-screen h-px animate-glow md:block animate-fade-right bg-gradient-to-r from-zinc-300/0 via-zinc-300/50 to-zinc-300/0" />
         <div className="my-16 text-center animate-fade-in">
           <h2 className="text-sm text-zinc-500">
-            Powering corporate{" "}
+            {" "}
             <Link
               target="_blank"
               href="https://ved-ai.com"
               className="underline duration-500 hover:text-zinc-300"
             >
-              India CSR Stack
+              Mahabharata
             </Link>{" "}
-            social responsibility as part of the India CSR initiative
+            Rediscovering the power of bharat
           </h2>
         </div>
       </div>

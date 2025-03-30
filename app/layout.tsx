@@ -5,14 +5,14 @@ import { Analytics } from "./components/analytics";
 
 export const metadata: Metadata = {
   title: {
-    default: "India CSR Stack",
-    template: "%s | India CSR Stack",
+    default: "Mahabharata",
+    template: "%s | Mahabharata",
   },
-  description: "India CSR Stack - Powering India's Corporate Social Responsibility Initiative",
+  description: "redisovering the power of bharat",
   openGraph: {
-    title: "India CSR Stack",
-    description: "India CSR Stack - Powering India's Corporate Social Responsibility Initiative",
-    url: "https://indiacsrstack.org",
+    title: "Mahabharata",
+    description: "Mahabharata - redisovering the power of bharat",
+    url: "https://mahabharata.org",
     locale: "en-IN",
     type: "website",
   },

@@ -8,6 +8,9 @@ export const Project = defineDocumentType(() => ({
 		title: { type: "string", required: true },
 		description: { type: "string", required: true },
 		date: { type: "date", required: true },
+		url: { type: "string", required: false },
+		repository: { type: "string", required: false },
+		published: { type: "boolean", required: false }
 	},
 	computedFields: {
 		slug: {
